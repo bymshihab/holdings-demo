@@ -1,0 +1,16 @@
+.hero-section {
+  padding-top: calc(400 / 1366 * 99.9%);
+  position: relative;
+  z-index: -50;
+}
+.hero-section img {
+  position: absolute;
+  top: -93px;
+  left: 0;
+  right: 0;
+  object-fit: cover;
+  height: 100%;
+  z-index: -200;
+}
+
+

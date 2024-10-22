@@ -1,0 +1,219 @@
+.hero-section {
+  padding-top: calc(400 / 1366 * 99.9%);
+  position: relative;
+  z-index: -50;
+}
+.hero-section img {
+  position: absolute;
+  top: -93px;
+  left: 0;
+  right: 0;
+  object-fit: cover;
+  height: 100%;
+  z-index: -200;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.height-fix {
+  height: 100%;
+}
+
+.rounded-img {
+  border-radius: 50%;
+}
+
+/* profile card */
+
+.profile-card {
+  position: relative;
+  font-family: sans-serif;
+  width: 220px;
+  height: 220px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 50%;
+  box-shadow: 0 0 22px #3336;
+  transition: 0.6s;
+  margin: 0 25px;
+}
+.profile-card:hover {
+  border-radius: 10px;
+  height: 260px;
+}
+.profile-card .img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: 0.6s;
+  z-index: 99;
+}
+.profile-card:hover .img {
+  transform: translateY(-60px);
+}
+.img img {
+  width: 100%;
+  border-radius: 50%;
+  box-shadow: 0 0 22px #3336;
+  transition: 0.6s;
+}
+.profile-card:hover img {
+  border-radius: 10px;
+}
+.caption {
+  text-align: center;
+  transform: translateY(-80px);
+  opacity: 0;
+  transition: 0.6s;
+}
+.profile-card:hover .caption {
+  opacity: 1;
+}
+.caption h3 {
+  font-size: 21px;
+  font-family: sans-serif;
+}
+.caption p {
+  font-size: 15px;
+  color: #0c52a1;
+  font-family: sans-serif;
+  margin: 2px 0 9px 0;
+}
+.caption .social-links a {
+  color: #333;
+  margin-right: 15px;
+  font-size: 21px;
+  transition: 0.6s;
+}
+.social-links a:hover {
+  color: #0c52a1;
+}
+
+.section-size {
+  height: 50rem;
+  width: 100%;
+}
+
+.derector-height {
+  height: 35rem;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.text-animation {
+  animation: appear 1s linear;
+}
+
+/* autoplay carrosal */
+
+/* Define the keyframes for scrolling */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 14));
+  } /* Adjusted for 14 slides */
+}
+
+/* Define the white gradient mixin as a CSS class */
+.white-gradient {
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+/* Define the slider container */
+.slider {
+  background: white;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+  height: 100px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Apply the white gradient to ::before and ::after pseudo-elements */
+.slider::before,
+.slider::after {
+  content: "";
+  @extend .white-gradient; /* Using Sass's extend feature, for CSS use it as a separate rule */
+  height: 100px;
+  position: absolute;
+  width: 200px;
+  z-index: 2;
+}
+
+.slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+
+.slider::before {
+  left: 0;
+  top: 0;
+}
+
+/* Define the slide track */
+.slide-track {
+  animation: scroll 40s linear infinite; /* Using the value directly instead of $animationSpeed */
+  display: flex;
+  width: calc(250px * 14); /* Adjust based on the total number of slides */
+}
+
+/* Define the individual slides */
+.slide {
+  height: 100px;
+  width: 250px;
+}
+
+/* autoplay carrosal */
+
+@media (max-width: 1024px) {
+  .height-fix {
+    height: 50% !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .slider{
+    width: 40rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+}
+
+
+@media (max-width: 425px) {
+  .height-fix {
+    height: 100% !important;
+  }
+
+  .derector-height {
+    height: 95rem;
+  }
+
+  .derectorSection-extra-height {
+    padding-top: 56rem;
+  }
+
+  .slider{
+    width: 300px;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+}

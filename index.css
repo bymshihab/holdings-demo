@@ -1,0 +1,713 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: white;
+  --secondary: rgb(194, 191, 191);
+  --tertiary: #89b0cf;
+  --defaultSeconds: 3s;
+  --blackColor: #000000;
+}
+
+/* div ,ul, ul > li, ul > li > a{
+  border: 1px solid red;
+} */
+
+.header-design {
+  background-image: linear-gradient(
+    to right,
+    transparent -0.1%,
+    var(--primary) 9.1%
+  );
+}
+
+.header-design li {
+  list-style: none;
+}
+
+.activeNav a {
+  color: var(--tertiary);
+}
+
+.menusItem {
+  text-decoration: none;
+}
+
+.menu-link > div {
+  padding: 1.8rem;
+  border-right: 1px solid gray;
+}
+
+.projectTab {
+  text-decoration: underline;
+  color: white;
+  border-bottom: 0 !important;
+}
+
+.projectTab:hover {
+  color: cadetblue;
+}
+.menu {
+  list-style: none;
+  padding: 0;
+}
+
+.menu > li {
+  position: relative;
+}
+/* Submenu styling */
+
+.slierImg img {
+  height: 150px;
+  width: 300px;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  margin-top: 1.7%;
+  width: 100%;
+}
+
+.submenu > li {
+  padding: 1.5rem 0.8rem; /* Adds padding to submenu items */
+}
+
+.submenu > li > a {
+  text-decoration: none;
+  color: black;
+}
+
+.submenu > li > a:hover {
+  background-color: lightgray; /* Changes background color on hover */
+  color: cadetblue; /* Changes text color on hover */
+}
+
+.animated-div {
+  transition: transform 0.4s ease-in-out;
+  position: absolute;
+  left: 70%;
+  z-index: -1;
+  width: 100%;
+  background-color: var(--primary);
+  top: -81.5%;
+}
+
+.animate-diagonal {
+  /* padding: 18%; */
+  padding: 18.3%;
+  transform: translateY(54%) translateX(-70%);
+}
+
+.submenu-img {
+  height: 150px;
+  width: 250px;
+  border-radius: 5px;
+}
+
+/* angle icon */
+.icon-angle {
+  width: 10px;
+}
+
+/* slides animation */
+/* slides animation */
+
+.flex-container {
+  position: absolute;
+
+  height: 90vh;
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  top: 0;
+  z-index: -15 !important;
+  /* @media screen and (max-width: 768px) {
+    flex-direction: column;
+  } */
+}
+/* .flex-title {
+  color: #f1f1f1;
+  position: relative;
+  font-size: 6vw;
+  margin: auto;
+  text-align: center;
+  transform: rotate(90deg);
+  top: 15%;
+  -webkit-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
+  @media screen and (max-width: 768px) {
+    transform: rotate(0deg) !important;
+  }
+} */
+
+.flex-slide {
+  -webkit-flex: 1; /* Safari 6.1+ */
+  -ms-flex: 1; /* IE 10 */
+  flex: 1;
+  cursor: pointer;
+  -webkit-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
+  /* @media screen and (max-width: 768px) {
+    overflow: auto;
+    overflow-x: hidden;
+  } */
+}
+.flex-slide p {
+  /* @media screen and (max-width: 768px) {
+    font-size: 2em;
+  } */
+}
+.flex-slide ul li {
+  /* @media screen and (max-width: 768px) {
+    font-size: 2em;
+  } */
+}
+.flex-slide:hover {
+  -webkit-flex-grow: 5;
+  flex-grow: 5;
+}
+.slide-one {
+  height: 100vh;
+  /* background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/769286/lake-macquarie-71208_1920.jpg); */
+  background: url(../images/homeTopSlide/FirstBulding.jpg);
+  background-size: cover;
+  background-position: center center;
+
+  @media screen and (min-width: 768px) {
+    animation: aboutFlexSlide var(--defaultSeconds) 1;
+    animation-delay: 0s;
+  }
+}
+
+.slide-two {
+  background: url(../images/homeTopSlide/SecondBuilding.jpg);
+  background-size: cover;
+  background-position: center center;
+}
+
+.slide-four {
+  background: url(../images/homeTopSlide/WaterModel.jpg);
+  background-size: cover;
+  background-position: center center;
+}
+.slide-three {
+  background: url(../images/homeTopSlide/office.png);
+  background-size: cover;
+  background-position: center center;
+}
+/* slides animation */
+
+.flex-container {
+  position: absolute;
+  height: 90vh;
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  top: 0;
+  z-index: -15 !important;
+}
+
+.flex-slide {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  cursor: pointer;
+  -webkit-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
+  @media screen and (max-width: 768px) {
+    overflow: auto;
+    overflow-x: hidden;
+  }
+}
+.flex-slide p {
+  @media screen and (max-width: 768px) {
+    font-size: 2em;
+  }
+}
+.flex-slide ul li {
+  @media screen and (max-width: 768px) {
+    font-size: 2em;
+  }
+}
+.flex-slide:hover {
+  -webkit-flex-grow: 5;
+  flex-grow: 5;
+}
+.slide-one {
+  height: 100vh;
+  /* background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/769286/lake-macquarie-71208_1920.jpg); */
+  background: url(../images/homeTopSlide/FirstBulding.jpg);
+  background-size: cover;
+  background-position: center center;
+
+  @media screen and (min-width: 768px) {
+    animation: aboutFlexSlide var(--defaultSeconds) 1;
+    animation-delay: 0s;
+  }
+}
+
+.flex-title-home {
+  @media screen and (min-width: 768px) {
+    transform: rotate(90deg);
+    top: 15%;
+    animation: aboutFlexSlide var(--defaultSeconds) 1;
+    animation-delay: 0s;
+  }
+}
+
+.slide-two {
+  background: url(../images/homeTopSlide/SecondBuilding.jpg);
+  background-size: cover;
+  background-position: center center;
+}
+
+.slide-four {
+  background: url(../images/homeTopSlide/WaterModel.jpg);
+  background-size: cover;
+  background-position: center center;
+}
+.slide-three {
+  background: url(../images/homeTopSlide/office.png);
+  background-size: cover;
+  background-position: center center;
+}
+
+/* Story section */
+.our-story-div {
+  position: absolute;
+  top: calc(100vh + 20px);
+}
+
+.story-div-two {
+  line-height: 2rem;
+  font-size: 1.2rem;
+}
+
+/* video-Container */
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-top: 45.25%; /* Aspect ratio 16:9 (height/width) */
+  overflow: hidden;
+}
+
+.video-container .video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 25%;
+  background-color: rgba(95, 73, 73, 0.5);
+  margin-top: 0.5rem;
+}
+
+.videoTitle-size {
+  font-size: xx-large;
+}
+
+/* end video container */
+
+.image-container {
+  position: relative;
+
+  overflow: hidden;
+}
+#homeLoan {
+  position: absolute;
+  color: white;
+  bottom: 50%; /* Aligns text near the bottom */
+  left: 2.5%; /* Aligns text from the left */
+  font-size: 250%;
+}
+
+.image {
+  position: absolute; /* Proper layering */
+  width: 50%;
+  height: 80%;
+  object-fit: cover;
+}
+
+.image-overlay {
+  position: relative;
+  right: -100%; /* Start off-screen to the right */
+  opacity: 0; /* Initially hidden */
+  display: flex;
+  align-items: center;
+  text-align: center;
+  transition: right 1.5s, opacity 1.5s; /* Slow transition for a smoother effect */
+}
+
+.image-container:hover .image-overlay {
+  right: 0; /* Slide the overlay into view on hover */
+  opacity: 1; /* Make it fully visible */
+}
+
+.overlay-content {
+  color: white; /* Text color */
+}
+
+#ServicesSlider {
+  background-color: rgb(44, 122, 110);
+  height: 40%;
+}
+
+.services-section {
+  padding-top: 6%;
+  margin-left: 4%;
+  color: white; /* White text */
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+.services-title {
+  font-size: 25px; /* Small uppercase heading */
+  text-transform: uppercase; /* To ensure uppercase text */
+}
+
+.services-description {
+  font-size: 30px; /* Larger font size for description */
+  line-height: 1.5; /* Adjust line spacing for readability */
+}
+.my-carousel-prev-icon {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="red" viewBox="0 0 8 8"><path d="M4 1.5l-3 3 3 3V4h3V3H4V1.5z"/></svg>'); /* Custom SVG for previous control */
+}
+
+.my-carousel-next-icon {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="red" viewBox="0 0 8 8"><path d="M4 1.5l3 3-3 3V4H1V3h3V1.5z"/></svg>'); /* Custom SVG for next control */
+}
+
+#testimonialTalks {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(100%); /* Changes the icon color to white */
+}
+.header {
+  text-align: center; /* Center align text */
+  font-size: 1.5rem; /* Adjust the font size */
+  margin-bottom: 20px; /* Space below the header */
+}
+
+.search-section {
+  display: flex;
+  justify-content: center; /* Center align the content */
+  align-items: center; /* Align vertically */
+}
+
+.search-input {
+  border: 1px solid #ccc; /* Border for the inputs */
+  padding: 5px 10px; /* Padding for comfort */
+  width: 200px; /* Fixed width */
+}
+#map {
+  height: 100vh; /* Make the map full height */
+  width: 100%; /* Make the map full width */
+  margin: 0; /* Remove any default margin */
+  padding: 0; /* Remove any default padding */
+}
+.meeting-schedule {
+  text-align: left; /* Align text to the left */
+  padding: 2rem; /* Padding for spacing */
+}
+
+.meeting-schedule h1 {
+  text-align: center; /* Center-align the main heading */
+  font-weight: bold; /* Make the heading bold */
+}
+
+.meeting-schedule .form-control {
+  border: none; /* Remove the default border */
+  border-bottom: 1px solid #ccc; /* Add a bottom border */
+  border-radius: 0; /* Remove border-radius */
+}
+
+.call-us-button {
+  background-color: black; /* Make the button black */
+  color: white; /* White text for contrast */
+  border: none; /* Remove border */
+  padding: 1rem; /* Add padding */
+  font-size: 1.2rem; /* Increase font size */
+  padding-left: 5%;
+}
+
+.call-us-button:hover {
+  background-color: #333; /* Change background on hover */
+  color: #fff; /* Keep white text */
+}
+
+.section-divider {
+  border-bottom: 1px solid #333; /* Divider line */
+  text-align: right; /* Align the text to the right */
+}
+#detailsSubmit {
+  font-size: xx-large;
+}
+
+/* MenuBtn design */
+
+.menu-button {
+  position: absolute; /* Absolute within the building */
+  top: 10px; /* Margin from the top */
+  right: 10px; /* Margin from the right */
+  padding: 10px 20px; /* Padding for the button */
+  background-color: #007bff; /* Blue button */
+  color: white; /* White text */
+  border: none; /* No border */
+  cursor: pointer; /* Pointer cursor */
+}
+
+.menulist {
+  display: none; /* Hidden by default */
+  position: absolute; /* Position relative to parent */
+  top: 0%; /* Position below the button */
+  left: 0px; /* Align with the left edge */
+  background-color: white; /* White background */
+  border: 1px solid #ddd; /* Border */
+  height: 1000%;
+  width: 100%;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1); /* Shadow for 3D effect */
+  z-index: 2000; /* Ensure menu appears on top */
+}
+.menulist ul {
+  padding-top: 7%;
+  padding-left: 6%;
+}
+.menulist ul li {
+  font-size: 140%;
+}
+#close {
+  position: absolute;
+  right: 2.5%;
+  top: 2.4%;
+}
+#menuBtn-img {
+  position: absolute;
+  top: 20%;
+  height: 90%;
+  width: 50%;
+  right: 0%;
+  opacity: 0.2;
+}
+#bubble-img {
+  position: absolute;
+  top: 66%;
+  height: 30%;
+  width: 15%;
+  right: 0%;
+  opacity: 0.7;
+}
+
+/* ul li:hover {
+  color: green;
+} */
+
+/* footer design */
+
+.footer {
+  background-color: #333; /* Dark background for the footer */
+  color: #ccc; /* Light text for contrast */
+  padding: 2rem; /* Padding for spacing */
+}
+
+.footer a {
+  color: #ccc; /* Light text for links */
+  text-decoration: none; /* No underline */
+}
+.footer ul li {
+  list-style-type: none;
+}
+
+.footer ul {
+  padding: 0px;
+}
+
+.footer a:hover {
+  color: #fff; /* Change to white on hover */
+}
+
+.footer .section-title {
+  font-weight: bold; /* Make the section titles bold */
+}
+
+.social-icons {
+  display: flex; /* Use flex for alignment */
+  gap: 1rem; /* Gap between icons */
+}
+
+.social-icons a {
+  color: #ccc; /* Light color for icons */
+}
+
+.social-icons a:hover {
+  color: #fff; /* White on hover */
+}
+
+.img-fluid {
+  border: 1px solid gray;
+}
+
+#fontSize {
+  font-size: 13px;
+}
+
+/* scrolling nav */
+
+.scrolled {
+  background-color: #333; /* Change the background color when scrolled */
+  color: white; /* Change text color when scrolled */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Add shadow when scrolled */
+}
+
+.yt-btn {
+  z-index: 1020;
+}
+
+#menus li > a{
+  text-decoration: none;
+}
+
+
+.menu-btn{
+  display: none;
+}
+
+/* contact us btn */
+.sticky-btn {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  z-index: 2000;
+}
+
+.contact-btn {
+  opacity: 0.50;
+}
+
+.contact-btn:hover {
+  opacity: 1;
+}
+
+
+.side-btn{
+  color: var(--blackColor);
+}
+
+
+
+
+
+/* media queries */
+@media (max-width: 2560px) {
+  .logo-width {
+    width: 50% !important;
+  }
+}
+
+@media (max-width: 1440px) {
+  .logo-width {
+    width: 50% !important;
+  }
+  .animate-diagonal {
+    transform: translateY(84%) translateX(-70%);
+  }
+}
+
+@media (max-width: 1024px) {
+  .logo-width {
+    width: 70% !important;
+  }
+  .animate-diagonal {
+    transform: translateY(161%) translateX(-70%);
+  }
+
+  .submenu-img {
+    height: 100px;
+    width: 200px;
+  }
+
+  .submenu {
+    margin-top: 4%;
+  }
+}
+
+@media (max-width: 992px) {
+  .logo-width {
+    width: 100% !important;
+  }
+  .animate-diagonal {
+    padding: 22.5%;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo-width {
+    width: 100% !important;
+  }
+  /* .animate-diagonal {
+    padding: 22.5%;
+  } */
+  .menu-item {
+    display: none;
+  }
+  .menu-btn{
+    display: block;
+  }
+}
+
+@media (max-width: 425px) {
+  .logo-width {
+    width: 100% !important;
+  }
+  .videoTitle-size {
+    font-size: x-small;
+    margin-top: 1rem;
+  }
+
+  .videoSubtitle-size {
+    font-size: xx-small;
+  }
+
+  .mobile-menu {
+    display: none;
+  }
+
+  .menu-btn{
+    display: block;
+  }
+}
+
+/* submenu 1.7% fixing:  margin-top: 1.7%;  */
+
+.nav-style.active {
+  color: var(--tertiary); /* Active link color */
+  font-weight: bold;
+  border-bottom: 1px solid var(--tertiary);
+}

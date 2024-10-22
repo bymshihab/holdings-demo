@@ -1,0 +1,95 @@
+div,
+a {
+  color: 1px solid red !important;
+}
+
+.dropdowns {
+  background-color: var(--tertiary);
+  height: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.search-section {
+  display: flex;
+  justify-content: center; /* Center align the content */
+  align-items: center; /* Align vertically */
+}
+
+.search-input {
+  border: 1px solid #ccc; /* Border for the inputs */
+  padding: 5px 10px; /* Padding for comfort */
+  width: 200px; /* Fixed width */
+  margin-left: 2%;
+}
+.card img {
+  height: 500px; /* Adjust image height */
+  width: 80%;
+  object-fit: cover; /* To ensure the image covers the entire area */
+}
+
+.property {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 2%;
+  background-color: #fff;
+  transition: transform 0.3s ease;
+  height: 44rem;
+  width: 31%;
+  margin: 0.5%;
+  border: 1px solid gray;
+  opacity: 80%;
+  position: relative;
+}
+
+.property:hover {
+  transform: translateY(-5px);
+  opacity: 100%;
+}
+
+.property img {
+  /* width: 70%; */
+
+  border-bottom: 1px solid #ccc;
+}
+
+#property-display {
+  display: flex;
+  justify-content: center;
+  /* border: 1px solid red; */
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 1%;
+}
+
+.property-btn {
+  padding: 0.3rem;
+  width: 27%;
+  z-index: 10;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: var(--tertiary);
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.select-option {
+  background: transparent;
+  border: 0;
+  border-bottom: 3px solid white;
+  color: white;
+  font-weight: 600;
+}
+
+.select-option option {
+  color: black;
+}
+
+@media (max-width: 1024px) {
+  .property {
+    height: 31rem;
+  }
+}
